@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -17,7 +18,6 @@ public class PlayerController : MonoBehaviour
         m_Rigidbody2D = GetComponent<Rigidbody2D>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         // 横移動の処理
@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviour
 
     void Goal() {
         Debug.Log("goal");
+        SceneManager.LoadScene("ClearScene");
     }
 
     void Jump()
