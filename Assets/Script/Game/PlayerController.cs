@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -40,6 +41,7 @@ public class PlayerController : MonoBehaviour
 
     void Out() {
         Debug.Log("out");
+        SceneManager.LoadScene("OutScene");
     }
 
     void Goal() {
